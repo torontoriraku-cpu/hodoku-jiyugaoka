@@ -58,7 +58,7 @@
 
   // フェードイン
   const targets = document.querySelectorAll(
-    '.sec-head, .concept__grid > *, .collage img, .menu-row, .char-item, .therapist__grid > *, .ticket__grid > *, ' +
+    '.sec-head, .concept__grid > *, .collage img, .menu-row, .char-item, .therapist__grid > *, ' +
     '.worry-list li, .reason-item, .detail__grid, .voice-item, .price-item, .flow-step, .faq-item, .other-menu a, .access__grid > *'
   );
   if ('IntersectionObserver' in window) {

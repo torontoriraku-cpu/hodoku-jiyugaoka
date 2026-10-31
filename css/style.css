@@ -358,10 +358,6 @@ h1, h2, h3, h4, p, dl, dd, figure, blockquote { margin: 0; }
 .therapist__sns a { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; text-decoration: none; color: var(--accent); }
 .therapist__sns svg { width: 20px; height: 20px; }
 
-/* ---------- Ticket ---------- */
-.ticket__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.ticket__photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-
 /* ---------- Contact ---------- */
 .contact {
   position: relative;
@@ -673,7 +669,7 @@ h1, h2, h3, h4, p, dl, dd, figure, blockquote { margin: 0; }
   .news { padding-top: 48px; }
   .news__bar { flex-direction: column; align-items: flex-start; gap: 4px; margin: 0 16px; padding: 14px 18px; }
 
-  .concept__grid, .menu-row, .ticket__grid, .access__grid, .page-fv__inner, .detail__grid { grid-template-columns: 1fr; gap: 32px; }
+  .concept__grid, .menu-row, .access__grid, .page-fv__inner, .detail__grid { grid-template-columns: 1fr; gap: 32px; }
   .menu-row + .menu-row { margin-top: 80px; }
   .menu-row:nth-child(even) .menu-row__photo, .detail__grid:nth-of-type(even) .detail__photo { order: 0; }
   .menu-row__photo::after { inset: 10px -10px -10px 10px; }
