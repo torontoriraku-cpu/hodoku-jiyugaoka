@@ -23,10 +23,10 @@
 }
 
 /* メニューごとのアクセントカラー */
-.theme-shinkai  { --accent: #22406b; --accent-dark: #172d4d; --accent-soft: #dfe7f2; }
-.theme-ikumou   { --accent: #4e6a3c; --accent-dark: #3a5029; --accent-soft: #e2ead9; }
-.theme-ashibumi { --accent: #a3683f; --accent-dark: #7f4f2e; --accent-soft: #f2e3d6; }
-.theme-lymph    { --accent: #9a5b6b; --accent-dark: #7a4553; --accent-soft: #f3e2e6; }
+.theme-shinkai  { --accent: #22406b; --accent-dark: #172d4d; --accent-soft: #dfe7f2; }  /* ネイビー */
+.theme-ikumou   { --accent: #86672a; --accent-dark: #6a511f; --accent-soft: #f1e8d2; }  /* ゴールド */
+.theme-ashibumi { --accent: #4a7550; --accent-dark: #375a3c; --accent-soft: #e0ebdf; }  /* 緑 */
+.theme-lymph    { --accent: #b04d3d; --accent-dark: #8e3b2e; --accent-soft: #f8e3dd; }  /* コーラル */
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
