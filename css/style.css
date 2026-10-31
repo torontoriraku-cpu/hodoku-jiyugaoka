@@ -186,6 +186,37 @@ h1, h2, h3, h4, p, dl, dd, figure, blockquote { margin: 0; }
 .gnav__list a small { display: block; font-family: var(--gothic); font-size: 10px; font-weight: 400; color: var(--muted); letter-spacing: .1em; }
 .gnav__list a:hover { color: var(--accent); }
 .gnav__cta { padding: 10px 22px; font-size: 14px; }
+
+/* MENU のサブメニュー(各メニューページへのリンク) */
+.gnav__has-sub { position: relative; }
+.gnav__sub {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 10;
+  min-width: 230px;
+  padding: 10px 0;
+  background: var(--white);
+  box-shadow: 0 12px 32px rgba(60, 50, 30, .12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 8px);
+  transition: opacity .25s, visibility .25s, transform .25s;
+}
+.gnav__sub::before { content: ""; position: absolute; left: 0; right: 0; top: -16px; height: 16px; }
+.gnav__has-sub:hover .gnav__sub,
+.gnav__has-sub:focus-within .gnav__sub { opacity: 1; visibility: visible; transform: translate(-50%, 14px); }
+.gnav__list .gnav__sub a {
+  padding: 10px 22px;
+  font-family: var(--mincho);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-align: left;
+  border-left: 3px solid transparent;
+}
+.gnav__list .gnav__sub a:hover { color: var(--accent); background: var(--accent-soft); border-left-color: var(--accent); }
+.gnav__sub-en { display: block; font-family: var(--en); font-size: 11px; font-weight: 600; letter-spacing: .14em; color: var(--muted); }
 .hamburger { display: none; }
 
 /* ---------- Top FV ---------- */
@@ -612,8 +643,27 @@ h1, h2, h3, h4, p, dl, dd, figure, blockquote { margin: 0; }
     transition: opacity .3s, visibility .3s;
   }
   .gnav.is-open { opacity: 1; visibility: visible; }
-  .gnav__list { flex-direction: column; gap: 18px; }
+  .gnav { justify-content: flex-start; padding: calc(var(--header-h) + 16px) 24px 40px; overflow-y: auto; }
+  .gnav__list { flex-direction: column; gap: 18px; width: 100%; max-width: 360px; }
   .gnav__list a { font-size: 1.2rem; }
+  .gnav__sub {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    min-width: 0;
+    margin-top: 12px;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  .gnav__sub::before { content: none; }
+  .gnav__has-sub:hover .gnav__sub,
+  .gnav__has-sub:focus-within .gnav__sub { transform: none; }
+  .gnav__list .gnav__sub a { padding: 10px 8px; font-size: 13px; text-align: center; background: var(--white); border-left: 0; border-top: 2px solid var(--accent); }
 
   .top-fv__inner { grid-template-columns: 1fr; min-height: 0; }
   .top-fv__visual { order: -1; }
