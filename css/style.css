@@ -25,8 +25,8 @@
 /* メニューごとのアクセントカラー */
 .theme-shinkai  { --accent: #22406b; --accent-dark: #172d4d; --accent-soft: #dfe7f2; }  /* ネイビー */
 .theme-ikumou   { --accent: #86672a; --accent-dark: #6a511f; --accent-soft: #f1e8d2; }  /* ゴールド */
-.theme-ashibumi { --accent: #4a7550; --accent-dark: #375a3c; --accent-soft: #e0ebdf; }  /* 緑 */
-.theme-lymph    { --accent: #b04d3d; --accent-dark: #8e3b2e; --accent-soft: #f8e3dd; }  /* コーラル */
+.theme-ashibumi { --accent: #66702c; --accent-dark: #4f5721; --accent-soft: #e8ead3; }  /* オリーブ */
+.theme-lymph    { --accent: #b3501e; --accent-dark: #8f3f17; --accent-soft: #fae4d7; }  /* オレンジ寄りのコーラル */
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
