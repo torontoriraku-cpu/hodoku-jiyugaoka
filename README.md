@@ -37,3 +37,8 @@ GitHub Pages(`main` ブランチ / root)で公開します。
 https://torontoriraku-cpu.github.io/hodoku-jiyugaoka/
 
 URL を変える場合は、各 HTML の `og:url`・`og:image`・`canonical` も合わせて変更してください。
+
+## CSS・JS を更新したとき
+
+ブラウザに古いファイルが残らないよう、各 HTML の `css/style.css?v=…` と `js/main.js?v=…` の
+`v=` の値を新しいもの(日付など)に変えてください。5ページすべて同じ値にします。
