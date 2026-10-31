@@ -714,3 +714,33 @@ h1, h2, h3, h4, p, dl, dd, figure, blockquote { margin: 0; }
   html { scroll-behavior: auto; }
   .js-fade { opacity: 1; transform: none; transition: none; }
 }
+
+/* ---------- お知らせ(複数行)・メディア掲載 ---------- */
+.news__list li { display: flex; gap: 16px; font-size: 14px; line-height: 1.8; }
+.news__list li + li { margin-top: 6px; }
+.news__list time { flex: none; width: 6.5em; font-family: var(--en); font-weight: 600; letter-spacing: .08em; color: var(--muted); }
+
+.media-list { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 960px; margin: 0 auto; }
+.media-item { position: relative; padding: 40px 36px 36px; background: var(--white); border-top: 3px solid var(--accent); }
+.media-item__tag {
+  display: inline-block;
+  padding: 0 12px;
+  font-family: var(--en);
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  color: var(--white);
+  background: var(--accent);
+}
+.media-item__date { margin-top: 14px; font-size: 13px; color: var(--muted); }
+.media-item h3 { margin-top: 6px; font-family: var(--mincho); font-size: 1.3rem; line-height: 1.6; }
+.media-item h3 small { font-size: .8em; color: var(--accent); }
+.media-item > p:not([class]) { margin-top: 16px; font-size: 14px; }
+.media-item strong { color: var(--accent); }
+.media-item__link { margin-top: 18px; }
+
+@media (max-width: 900px) {
+  .news__list li { flex-direction: column; gap: 0; }
+  .media-list { grid-template-columns: 1fr; gap: 16px; }
+  .media-item { padding: 32px 22px 26px; }
+}
