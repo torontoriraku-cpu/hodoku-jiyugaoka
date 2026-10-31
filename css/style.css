@@ -744,7 +744,8 @@ h1, h2, h3, h4, p, dl, dd, figure, blockquote { margin: 0; }
   .media-list { grid-template-columns: 1fr; gap: 16px; }
   .media-item { padding: 32px 22px 26px; }
 }
-.media-item__photos { display: grid; gap: 8px; margin-bottom: 8px; }
+.media-item__photos { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+.media-item__main { grid-column: 1 / -1; }
 .media-item__photos img { width: 100%; height: auto; }
 .media-item__credit { margin-bottom: 20px; font-size: 11px; color: var(--muted); text-align: right; }
 .media-item__movie { position: relative; margin-bottom: 28px; aspect-ratio: 16 / 9; background: #000; }
